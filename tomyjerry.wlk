@@ -1,27 +1,57 @@
 object tom {
 	
-	//Completar! Pueden aparecer variables y métodos nuevos!
-	 
+	var energia = 50
+
 	method comer(raton) {
-		//Completar
+		energia += self.energiaQueObtieneDe(raton)
 	}
 	
 	method correr(distancia){
-		//Completar!
+		energia -= self.energiaQueConsumePor(distancia)
 	}
 	
+	method energiaQueObtieneDe(raton) {
+	  return 12 + raton.peso()
+	}
+
+	method energiaQueConsumePor(distancia) {
+	  return distancia / 2
+	}
+
+	method energia() {
+	  return energia
+	}
+
 	method velocidadMaxima()  {
-		//Completar!
+		return 5 + (energia / 10)
+	}
+
+	method puedeComer(distancia) {
+	  return distancia/2 < energia
 	}
 	
+	method quiereComer(raton,distancia) {
+	  return self.puedeComer(distancia) and (self.energiaQueConsumePor(distancia) < self.energiaQueObtieneDe(raton))
+	}
+
 }
 
 object jerry {
-	//Completar!
+	var edad = 2
+	method peso() {
+	  return edad*20
+	}
+
+	method cumplir() {
+	  edad += 1
+	}
 }
 
 object nibbles {
-	//Completar!
+	const pesoNibbles = 35
+	method peso() {
+	  return pesoNibbles
+	}
 }
 
 

@@ -15,7 +15,7 @@ La energía va a variar según vaya comiendo ratones y corriendo por ahí:
 
 * Cuando tom corre, su energía disminuye en `cantidad de metros que corrió / 2` 
 * Cuando tom come un ratón, su energía aumenta en `12 + el peso del ratón` 
-* La velocidad máxima de tom es `5 + energía/10`
+* La velocidad máxima de tom es `5 + energía/10` 
 
 Tom comienza con 50 de energía
 
